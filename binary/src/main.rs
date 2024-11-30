@@ -13,7 +13,7 @@ use std::path::PathBuf;
 #[command(version, about, long_about = None)]
 struct Args {
     #[arg(short, long)]
-    day: u8,
+    day: f32,               // values with decimals, i.e. 1.1, represent days and parts, i.e. 1.1 = day 1, part 1
     #[arg(short, long)]
     input_file: String,
 }
@@ -41,7 +41,7 @@ fn main() -> Result<(), AppError> {
 
     // select the appropriate solution function, depending on the challenge day, error out if the wrong day is entered
     match args.day {
-        1 => day1_challenge(challenge_input),
+        1.0 => day1_challenge(challenge_input),
         _ => eprintln!("Invalid challenge name, please try again..."),
     }
 
