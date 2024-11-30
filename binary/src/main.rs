@@ -19,8 +19,8 @@ fn main() {
     println!("Hello, Advent of Code 2024!");
 
     let args = Args::parse();
-    let raw_path = format!("../../input/{}", args.input_file);
-    let path = PathBuf::from(raw_path);
+    let abs_path = format!("/Users/jeff/Development/aoc2024/input/{}", args.input_file);
+    let path = PathBuf::from(abs_path);
 
     match args.day {
         1 => day1_challenge(path),
