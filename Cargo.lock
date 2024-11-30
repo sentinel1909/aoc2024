@@ -53,10 +53,11 @@ dependencies = [
 
 [[package]]
 name = "binary"
-version = "0.3.0"
+version = "0.4.0"
 dependencies = [
  "clap",
  "day1",
+ "errors",
 ]
 
 [[package]]
@@ -107,15 +108,15 @@ checksum = "5b63caa9aa9397e2d9480a9b13673856c78d8ac123288526c37d7839f2a86990"
 
 [[package]]
 name = "day1"
-version = "0.3.0"
+version = "0.4.0"
 
 [[package]]
 name = "domain"
-version = "0.3.0"
+version = "0.4.0"
 
 [[package]]
 name = "errors"
-version = "0.3.0"
+version = "0.4.0"
 
 [[package]]
 name = "heck"
@@ -153,7 +154,7 @@ dependencies = [
 
 [[package]]
 name = "parser"
-version = "0.3.0"
+version = "0.4.0"
 dependencies = [
  "nom",
 ]
