@@ -1,0 +1,13 @@
+[package]
+name = "parser"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[lib]
+name = "parser"
+path = "src/lib.rs"
+
+[dependencies]
+nom = "7.1.3"

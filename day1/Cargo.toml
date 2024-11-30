@@ -1,0 +1,11 @@
+[package]
+name = "day1"
+version.workspace = true
+edition = "2021"
+
+[lib]
+name = "day1"
+path = "src/lib.rs"
+
+[dependencies]
+
