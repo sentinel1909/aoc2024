@@ -10,3 +10,5 @@ name = "aoc2024"
 path = "src/main.rs"
 
 [dependencies]
+day1 = { path = "../day1" }
+clap = { version = "4.5.21", features = [ "derive" ] }
