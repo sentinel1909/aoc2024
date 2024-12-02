@@ -3,7 +3,7 @@
 // enum type to represent possible error variants
 #[derive(Debug)]
 pub enum AppError {
-    IOError(std::io::Error),
+    IOError(std::io::Error), 
 }
 
 // implement the From trait for the IOError variant
@@ -12,3 +12,4 @@ impl From<std::io::Error> for AppError {
         AppError::IOError(error)
     }
 }
+

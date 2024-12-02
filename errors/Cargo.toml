@@ -6,3 +6,4 @@ license.workspace = true
 repository.workspace = true
 
 [dependencies]
+nom = "7.1.3"

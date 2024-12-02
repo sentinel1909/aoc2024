@@ -8,4 +8,7 @@ name = "day1"
 path = "src/lib.rs"
 
 [dependencies]
+domain = { path = "../domain" }
+errors = { path = "../errors" }
+parser = { path = "../parser" }
 

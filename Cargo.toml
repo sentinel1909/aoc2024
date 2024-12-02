@@ -9,11 +9,12 @@ members = [
 ]
 
 [workspace.package]
-version = "0.4.1"
+version = "0.5.0"
 edition = "2021"
 license = "MIT"
 repository = "https://github.com/sentinel1909/aoc2024"
 
 [workspace.dependencies]
+
 
 
