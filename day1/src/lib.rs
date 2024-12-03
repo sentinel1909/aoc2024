@@ -4,7 +4,7 @@
 use domain::Day1Puzzle1;
 use parser::parse_numeric;
 
-// function which solves the Day 1 challenge
+// function which solves the Day 1, Puzzle 1 challenge
 pub fn day1_puzzle1_challenge(buffer: String) {
     println!("Day 1, Puzzle 1 Challenge");
     let mut location_id_lists = Day1Puzzle1::default();
@@ -38,4 +38,32 @@ pub fn day1_puzzle1_challenge(buffer: String) {
     println!("Calculating total distance...");
     let total_distance = distances.iter().sum::<u32>();
     println!("Total Distance between lists: {}", total_distance);
+}
+
+// function which solves the Day 1, Puzzle 2 challenge
+pub fn day2_puzzle2_challenge(buffer: String) {
+    println!("Day 1, Puzzle 2 Challenge");
+    let mut location_id_lists = Day1Puzzle1::default();
+
+    // parse the input into two lists
+    println!("Parsing input...");
+    for line in buffer.lines() {
+        let (right_item, left_item) = parse_numeric(line).unwrap();
+        location_id_lists.left_list.push(left_item.trim().parse().unwrap());
+        location_id_lists.right_list.push(right_item.trim().parse().unwrap());
+    }
+
+    // determine how many times a number in the left list appears in the right list
+    println!("Scanning left list and checking for identical entries in the right list, then determining the similarity score...");
+    let mut similarity_score = 0;
+    for left_item in location_id_lists.left_list.iter() {
+        let mut count = 0;
+        for right_item in location_id_lists.right_list.iter() {
+            if left_item == right_item {
+                count += 1;
+            } 
+        }
+        similarity_score += left_item * count;
+    } 
+    println!("Total Similarity Score: {}", similarity_score);
 }

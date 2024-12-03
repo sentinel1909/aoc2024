@@ -2,7 +2,7 @@
 
 // dependencies
 use clap::Parser;
-use day1::day1_puzzle1_challenge;
+use day1::{day1_puzzle1_challenge, day2_puzzle2_challenge};
 use errors::AppError;
 use std::fs::File;
 use std::io::Read;
@@ -42,6 +42,7 @@ fn main() -> Result<(), AppError> {
     // select the appropriate solution function, depending on the challenge day, error out if the wrong day is entered
     match args.day {
         1.1 => day1_puzzle1_challenge(challenge_input),
+        1.2 => day2_puzzle2_challenge(challenge_input),
         _ => eprintln!("Invalid challenge name, please try again..."),
     }
 
