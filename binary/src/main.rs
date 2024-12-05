@@ -2,7 +2,8 @@
 
 // dependencies
 use clap::Parser;
-use day1::{day1_puzzle1_challenge, day2_puzzle2_challenge};
+use day1::{day1_puzzle1_challenge, day1_puzzle2_challenge};
+use day2::day2_puzzle1_challenge;
 use errors::AppError;
 use std::fs::File;
 use std::io::Read;
@@ -13,7 +14,7 @@ use std::path::PathBuf;
 #[command(version, about, long_about = None)]
 struct Args {
     #[arg(short, long)]
-    day: f32,               // values with decimals, i.e. 1.1, represent days and parts, i.e. 1.1 = day 1, part 1
+    day: f32, // values with decimals, i.e. 1.1, represent days and parts, i.e. 1.1 = day 1, part 1
     #[arg(short, long)]
     input_file: String,
 }
@@ -42,7 +43,8 @@ fn main() -> Result<(), AppError> {
     // select the appropriate solution function, depending on the challenge day, error out if the wrong day is entered
     match args.day {
         1.1 => day1_puzzle1_challenge(challenge_input),
-        1.2 => day2_puzzle2_challenge(challenge_input),
+        1.2 => day1_puzzle2_challenge(challenge_input),
+        2.1 => day2_puzzle1_challenge(challenge_input),
         _ => eprintln!("Invalid challenge name, please try again..."),
     }
 

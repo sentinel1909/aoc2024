@@ -1,0 +1,15 @@
+[package]
+name = "day2"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[lib]
+name = "day2"
+path = "src/lib.rs"
+
+[dependencies]
+domain = { path = "../domain" }
+errors = { path = "../errors" }
+parser = { path = "../parser" }

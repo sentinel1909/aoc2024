@@ -5,7 +5,7 @@ members = [
   "binary",
   "domain",
   "errors",
-  "day1", "parser",
+  "day1","day2", "parser"
 ]
 
 [workspace.package]

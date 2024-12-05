@@ -57,6 +57,7 @@ version = "0.6.0"
 dependencies = [
  "clap",
  "day1",
+ "day2",
  "errors",
 ]
 
@@ -108,6 +109,15 @@ checksum = "5b63caa9aa9397e2d9480a9b13673856c78d8ac123288526c37d7839f2a86990"
 
 [[package]]
 name = "day1"
+version = "0.6.0"
+dependencies = [
+ "domain",
+ "errors",
+ "parser",
+]
+
+[[package]]
+name = "day2"
 version = "0.6.0"
 dependencies = [
  "domain",
