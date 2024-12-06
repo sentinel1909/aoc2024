@@ -3,6 +3,28 @@
 // dependencies
 use parser::parse_report;
 
+// function which checks if the levels in a report are all increasing
+fn levels_increasing(input: Vec<u32>) -> bool {
+    
+    for i in 1..input.len() {
+        if input[i] <= input[i - 1] {
+            return false
+        }
+    }
+    true 
+}
+
+// function which checks if the levels in a report are all increasing
+fn levels_decreasing(input: Vec<u32>) -> bool {
+    
+    for i in 1..input.len() {
+        if input[i] >= input[i - 1] {
+            return false
+        }
+    }
+    true 
+}
+
 // function which solves the Day 2, Puzzle 1 challenge
 pub fn day2_puzzle1_challenge(buffer: String) {
     
@@ -18,5 +40,28 @@ pub fn day2_puzzle1_challenge(buffer: String) {
             numeric_report.push(numeric_level);
         }
         println!("{:?}", numeric_report);
+    }
+}
+
+// tests
+#[cfg(test)]
+mod tests {
+
+    use super::*;
+
+    #[test]
+    fn check_levels_increasing() {
+        let report: Vec<u32> = vec![1, 3, 6, 7, 9];
+        let result = levels_increasing(report);
+        let expected = true;
+        assert_eq!(result, expected);
+    }
+
+    #[test]
+    fn check_levels_decreasing() {
+        let report: Vec<u32> = vec![7, 6, 4, 2, 1];
+        let result = levels_decreasing(report);
+        let expected = true;
+        assert_eq!(result, expected);
     }
 }
