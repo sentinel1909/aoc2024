@@ -6,3 +6,4 @@ I've built the challenge this year as a CLI app which takes the challenge day, w
 
 2024-12-02: Day 1, Puzzle 1 solved
 2024-12-03: Day 1, Puzzle 2 solved
+2024-12-11: Day 2 puzzles solved. Forgot to record separately that Puzzle 1 was done, noting full completion today.
